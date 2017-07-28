@@ -5,5 +5,11 @@
 // Variables
 @import "variables";
 
-// Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+body{
+  font-family: "Raleway", sans-serif !important;
+}
+.panel-heading {
+  background-color: #3765f1 !important;
+  border-color: #3765f1 !important;
+  color: #fff !important;
+}
