@@ -8,7 +8,7 @@
                 <div class="panel-heading">Dashboard</div>
                 <div class="panel-body">
                     <p style="margin-bottom: 0"><a style="color: #f47d30;" href="/add-account">add account</a></p>
-                    <p><a style="color: #f47d30" href="/add-operation">add operation</a></p>
+                    <p><a style="" href="/add-operation">add operation</a></p>
                 </div>
             </div>
         </div>
@@ -35,9 +35,9 @@
                                         <select multiple="multiple" class="multiselect" style="width: 100%">
                                             @foreach($operations as $operation)
                                                 @if ($account->operations->contains('id', $operation->id))
-                                                    <option selected value="{{$operation->id}}">{{$operation->name}}</option>
+                                                    <option selected data-account="{{$account->id}}" value="{{$operation->id}}">{{$operation->name}}</option>
                                                 @else
-                                                    <option value="{{$operation->id}}">{{$operation->name}}</option>
+                                                    <option data-account="{{$account->id}}" value="{{$operation->id}}">{{$operation->name}}</option>
                                                 @endif
                                             @endforeach
                                         </select>
@@ -61,6 +61,8 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('.multiselect').multiselect();
+
+        $('.multiselect option').click(function )
     });
 </script>
 @endsection

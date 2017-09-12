@@ -8,7 +8,7 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                    You are logged in go check your go check your <a href="/accounts">accounts</a>.
                 </div>
             </div>
         </div>
