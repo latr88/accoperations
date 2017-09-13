@@ -22,4 +22,12 @@ class AccountController extends Controller
 
         return view('accounts.index', compact('accounts', 'operations'));
     }
+
+    public function add(Request $request)
+    {
+        $data = $request->except('_token');
+        $data['isActive'] = ($data['isActive']=='on' ? true : false);
+        Account::create($data);
+        return redirect('/add-account')->with(['message'=>'Account sucessfully added','message_type'=>'success']);
+    }
 }

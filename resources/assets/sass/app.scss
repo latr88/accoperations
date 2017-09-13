@@ -14,7 +14,39 @@ body{
   color: #fff !important;
 }
 
-a, a:hover
+a
 {
-  color: #f47d30;
+  color: #f47d30 !important;
+}
+
+a:hover
+{
+  font-weight: bold;
+}
+
+.navbar a, .nav a
+{
+  color: #666 !important;
+}
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+  color: #fff !important;
+  text-decoration: none;
+  background-color: #f47d30;
+  outline: 0;
+}
+
+.dropdown-menu a{
+  color: #666 !important;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #f47d30;
+  border-color: #f47d30;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #fd690a;
+  border-color: #fd690a;
 }

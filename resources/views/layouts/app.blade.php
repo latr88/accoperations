@@ -25,6 +25,8 @@
     <script>
         window.Laravel = {"csrfToken":"7uMYFQ1JcFcrTa7RQ0SrVuRnPKIJVgbmAXfOY3fF"};
     </script>
+
+    @yield('css')
 </head>
 <body>
 <div id="app">
