@@ -15,8 +15,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Dashboard</div>
                 <div class="panel-body">
-                    <p style="margin-bottom: 0"><a href="/accounts">accounts</a></p>
-                    <p style="margin-bottom: 0"><a href="/operations">operations</a></p>
+                    <p style="margin-bottom: 0"><a href="/accounts">view accounts</a></p>
                     <p><a style="" href="/add-operation">add operation</a></p>
                 </div>
             </div>
