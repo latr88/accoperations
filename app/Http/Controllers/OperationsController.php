@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Account;
 use App\Operation;
 use Illuminate\Http\Request;
 
-class AccountController extends Controller
+class OperationsController extends Controller
 {
     //
-
     public function __construct()
     {
         $this->middleware('auth');
@@ -26,8 +24,8 @@ class AccountController extends Controller
     public function add(Request $request)
     {
         $data = $request->except('_token');
-        $data['isActive'] = ($data['isActive']=='on' ? true : false);
-        Account::create($data);
-        return redirect('/add-account')->with(['message'=>'Account successfully added','status'=>'success']);
+        Operation::create($data);
+        $message = 'Operation <strong>"'.$data['name'].'"</strong> successfully added';
+        return redirect('/add-operation')->with(['message'=>'Operation successfully added','status'=>'success']);
     }
 }

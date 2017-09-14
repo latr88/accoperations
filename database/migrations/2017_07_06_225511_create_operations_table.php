@@ -17,7 +17,9 @@ class CreateOperationsTable extends Migration
         Schema::create('operations', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('priority')->nullable()->nullable()->default(1);
+            $table->integer('group')->nullable()->default(1);
+            $table->string('description')->nullable();
+            $table->integer('priority')->nullable()->default(1);
             $table->timestamps();
         });
 

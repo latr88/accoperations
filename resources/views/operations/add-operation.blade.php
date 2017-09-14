@@ -13,7 +13,7 @@
     <div class="row">
         @if (session('status'))
             <div class="alert alert-{{session('status')}}">
-                {{ session('message') }}
+                {!! session('message') !!}
             </div>
         @endif
         <div class="col-md-3">
@@ -22,7 +22,7 @@
                 <div class="panel-body">
                     <p style="margin-bottom: 0"><a href="/accounts">accounts</a></p>
                     <p style="margin-bottom: 0"><a href="/operations">operations</a></p>
-                    <p><a style="" href="/add-operation">add operation</a></p>
+                    <p><a style="" href="/add-account">add account</a></p>
                 </div>
             </div>
         </div>
@@ -31,29 +31,23 @@
                 <div class="panel-heading">Accounts</div>
 
                 <div class="panel-body">
-                    <form action="/add-account" method="POST">
+                    <form action="/add-operation" method="POST">
                         {!! csrf_field() !!}
                         <div class="row">
-                            <div class="col-xs-4 form-group">
-                                <label for=number">Number</label>
-                                <input type="number" required class="form-control" name="number" id="number" aria-describedby="account number" placeholder="Enter account number">
-                            </div>
                             <div class="col-xs-8 form-group">
                                 <label for=name">Name</label>
-                                <input type="name" required class="form-control" name="name" id="name" aria-describedby="account name" placeholder="Enter account name">
+                                <input type="name" required class="form-control" name="name" id="name" aria-describedby="account name" placeholder="Enter operation name">
+                            </div>
+                            <div class="col-xs-4 form-group">
+                                <label for=group">Group Number</label>
+                                <input type="number" required class="form-control" name="group" id="group" aria-describedby="group number" placeholder="Enter group number">
                             </div>
                             <div class="col-xs-12 form-group">
                                 <label for=name">Description</label>
-                                <textarea class="form-control" name="description" id="description" aria-describedby="account description" placeholder="Enter account description"></textarea>
-                            </div>
-                            <div class="col-xs-12 form-check">
-                                <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" name="isActive">
-                                    Active
-                                </label>
+                                <textarea class="form-control" name="description" id="description" aria-describedby="operation description" placeholder="Enter operation description"></textarea>
                             </div>
                             <div align="right" class="col-xs-12">
-                                <button type="submit" class="btn btn-primary">Add account</button>
+                                <button type="submit" class="btn btn-primary">Add operation</button>
                             </div>
                         </div>
                     </form>
