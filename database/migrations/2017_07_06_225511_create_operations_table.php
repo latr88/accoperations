@@ -18,6 +18,7 @@ class CreateOperationsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->integer('group')->nullable()->default(1);
+            $table->unique(array("name", "group"));
             $table->string('description')->nullable();
             $table->integer('priority')->nullable()->default(1);
             $table->timestamps();

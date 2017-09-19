@@ -28,6 +28,7 @@ class AccountController extends Controller
         $data = $request->except('_token');
         $data['isActive'] = ($data['isActive']=='on' ? true : false);
         Account::create($data);
-        return redirect('/add-account')->with(['message'=>'Account successfully added','status'=>'success']);
+        $message = 'Account <strong>"'.$data['name'].'"</strong> was added';
+        return redirect('/add-account')->with(['message'=>$message,'status'=>'success']);
     }
 }

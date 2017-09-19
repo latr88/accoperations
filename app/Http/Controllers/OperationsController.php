@@ -25,7 +25,7 @@ class OperationsController extends Controller
     {
         $data = $request->except('_token');
         Operation::create($data);
-        $message = 'Operation <strong>"'.$data['name'].'"</strong> successfully added';
-        return redirect('/add-operation')->with(['message'=>'Operation successfully added','status'=>'success']);
+        $message = 'Operation <strong>"'.$data['name'].'"</strong> was added';
+        return redirect('/add-operation')->with(['message'=>$message,'status'=>'success']);
     }
 }

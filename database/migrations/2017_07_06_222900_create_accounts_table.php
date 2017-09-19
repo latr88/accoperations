@@ -18,6 +18,7 @@ class CreateAccountsTable extends Migration
             $table->increments('id');
             $table->string('number');
             $table->string('name');
+            $table->unique(array("name", "number"));
             $table->boolean('isActive')->default(true);
             $table->string('description')->nullable();
             $table->timestamps();

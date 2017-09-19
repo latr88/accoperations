@@ -11,16 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Auth::routes();
 
 Route::post('/add-account', 'AccountController@add');
 Route::post('/add-operation', 'OperationsController@add');
 
+Route::get('/', 'HomeController@index')->name('welcome-home');
 Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/accounts', 'AccountController@index');
 
 Route::get('/add-account', function () {
